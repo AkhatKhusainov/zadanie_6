@@ -1,0 +1,31 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include<iostream>
+using namespace std;
+void zad1() {
+	char a[80];
+
+	scanf("%s", a);
+
+	int size = strlen(a);
+
+
+
+	int i = size / 2;
+
+	while (i--) {
+
+		if (a[i] != a[size - i - 1]) {
+
+			break;
+		}
+
+	}
+
+
+	cout << ((i < 0) ? "yes" : "no");
+
+}
+
+int main() {
+	zad1();
+}
