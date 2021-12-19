@@ -1,0 +1,29 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include<iostream>
+#include<string>
+#include <sstream>
+
+using namespace std;
+
+int sumOfNumbers(char *x) {
+	int sum, cur;
+	sum = cur = 0;
+	for (int i = 0; x[i]; i++) {
+		if (x[i] >= '0' && x[i] <= '9') {
+			cur = cur * 10 + (x[i] - '0');
+			continue;
+		}
+		else {
+			sum += cur; cur = 0;
+		}
+	}
+	return sum + cur;
+}
+
+
+int main() {
+	string in; 
+	getline(std::cin, in);
+	cout<<sumOfNumbers((char *)in.c_str());
+	//zad1();
+}
